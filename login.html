@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITTA - Masuk</title>
+  <meta name="description" content="Sistem Informasi Tiras dan Transaksi Bahan Ajar Universitas Terbuka.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Interstate:wght@400;600;700&family=Red+Hat+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-shell">
+    <main class="auth-panel">
+      <a class="auth-brand" href="index.html">
+        <img class="auth-brand-logo" src="img/logo-ut.png" alt="Logo Universitas Terbuka" width="48" height="48">
+        <span class="auth-brand-text">
+          <strong>SITTA</strong>
+          <span class="auth-brand-label">Universitas Terbuka</span>
+        </span>
+      </a>
+
+      <div class="auth-group">
+        <div class="auth-head">
+          <h1>Masuk</h1>
+          <span class="auth-wordmark">Making Higher Education Open to All</span>
+          <div class="auth-divider"></div>
+        </div>
+
+        <div class="auth-body">
+          <p class="muted">Kelola pemesanan dan distribusi bahan ajar Universitas Terbuka.</p>
+
+          <form id="loginForm" novalidate>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="nama@ut.ac.id" autocomplete="username" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Masukkan password" autocomplete="current-password" required>
+
+            <button class="btn btn-primary auth-submit" type="submit">Masuk</button>
+          </form>
+
+          <div class="auth-links">
+            <a class="text-button" href="index.html">&larr; Halaman awal</a>
+            <button class="text-button" type="button" data-modal="forgotModal">Cek Akun / Lupa Password</button>
+            <button class="text-button" type="button" data-modal="registerModal">Daftar Akun SITTA</button>
+          </div>
+
+          <details class="auth-demo" id="demoBox">
+            <summary>Akun demo</summary>
+            <p class="muted">Klik salah satu akun untuk mengisi form otomatis.</p>
+            <ul id="demoAccounts" class="demo-list"></ul>
+          </details>
+
+          <p id="demoNote" class="demo-note"></p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="auth-aside">
+      <div class="auth-aside-inner">
+        <h2>Selamat datang di SITTA</h2>
+        <p>Masuk untuk melihat rekap bahan ajar, stok, dan pengiriman pada lokasi Anda.</p>
+        <ul class="auth-aside-list">
+          <li>Informasi bahan ajar Universitas Terbuka.</li>
+          <li>Tracking pengiriman bahan ajar.</li>
+          <li>Histori transaksi bahan ajar.</li>
+        </ul>
+        <p class="auth-aside-meta">
+          <strong>Tugas Praktik 1</strong>
+          Pemrograman Berbasis Web &middot; STSI4209
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="modal" id="forgotModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="forgotTitle">
+      <button class="modal-close" type="button" aria-label="Tutup">&times;</button>
+      <h2 id="forgotTitle">Lupa Password</h2>
+      <p class="muted">Masukkan email untuk menerima instruksi reset password.</p>
+      <form id="forgotForm" novalidate>
+        <label for="resetEmail">Email</label>
+        <input id="resetEmail" type="email" placeholder="nama@ut.ac.id" required>
+        <button class="btn btn-primary btn-block" type="submit">Kirim</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+      <button class="modal-close" type="button" aria-label="Tutup">&times;</button>
+      <h2 id="registerTitle">Daftar Akun</h2>
+      <p class="muted">Form pendaftaran sederhana untuk simulasi tugas.</p>
+      <form id="registerForm" novalidate>
+        <label for="registerName">Nama</label>
+        <input id="registerName" placeholder="Nama lengkap" required>
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" placeholder="nama@ut.ac.id" required>
+        <button class="btn btn-primary btn-block" type="submit">Daftar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITTA - Pemrograman Berbasis Web - Praktik 1</title>
+  <meta name="description" content="Sistem Informasi Tiras dan Transaksi Bahan Ajar Universitas Terbuka.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Interstate:wght@400;600;700&family=Red+Hat+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-shell">
+    <main class="auth-panel">
+      <a class="auth-brand" href="index.html">
+        <img class="auth-brand-logo" src="img/logo-ut.png" alt="Logo Universitas Terbuka" width="48" height="48">
+        <span class="auth-brand-text">
+          <strong>SITTA</strong>
+          <span class="auth-brand-label">Universitas Terbuka</span>
+        </span>
+      </a>
+
+      <div class="auth-group">
+        <div class="auth-head">
+          <h1>Sistem Informasi Tiras dan Transaksi Bahan Ajar</h1>
+          <p>Pemantauan ketersediaan bahan ajar untuk layanan Tutorial, dari Pusat hingga seluruh UPBJJ-UT.</p>
+          <span class="auth-wordmark">Making Higher Education Open to All</span>
+        </div>
+
+        <div class="auth-body">
+          <div class="demo-box">
+            <p class="muted">SITTA membantu UPBJJ-UT memantau stok, lokasi, dan pergerakan bahan ajar secara terpadu, sehingga layanan Tutorial dapat berjalan tepat waktu.</p>
+          </div>
+
+          <div class="auth-links">
+            <span class="eyebrow">SITTA &middot; STSI4209</span>
+            <a class="text-button" href="login.html">Masuk ke SITTA &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="auth-aside">
+      <div class="auth-aside-inner">
+        <h2>Satu data, semua lokasi.</h2>
+        <p>Bahan ajar yang dikirim, diterima, dan dipakai tercatat dalam satu sistem yang dapat diakses oleh Pusat, untar, dan fakultas.</p>
+        <ul class="auth-aside-list">
+          <li>Rekap stok bahan ajar per lokasi dan per kode barang.</li>
+          <li>Riwayat pengiriman dari Pusat ke untar.</li>
+          <li>Status ketersediaan untuk setiap judul.</li>
+        </ul>
+        <p class="auth-aside-meta">
+          <strong>Tugas Praktik 1</strong>
+          Pemrograman Berbasis Web &middot; STSI4209
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    if (SittaAuth.sekarang()) {
+      window.location.replace("dashboard.html");
+    }
+  </script>
+</body>
+</html>
